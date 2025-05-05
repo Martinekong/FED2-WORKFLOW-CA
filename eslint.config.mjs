@@ -1,27 +1,27 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import { defineConfig } from 'eslint/config';
-import vitest from 'eslint-plugin-vitest';
+import js from "@eslint/js";
+import globals from "globals";
+import { defineConfig } from "eslint/config";
+import vitest from "eslint-plugin-vitest";
 
 export default defineConfig([
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
-    extends: ['js/recommended'],
+    extends: ["js/recommended"],
     languageOptions: {
       globals: globals.browser,
     },
   },
 
   {
-    files: ['tailwind.config.js', 'eslint.config.js'],
+    files: ["tailwind.config.js", "eslint.config.js"],
     languageOptions: {
       globals: globals.node,
     },
   },
 
   {
-    files: ['**/*.test.js', '**/*.spec.js'],
+    files: ["**/*.test.js", "**/*.spec.js"],
     plugins: { vitest },
     languageOptions: {
       globals: globals.vitest,
