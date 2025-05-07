@@ -24,7 +24,10 @@ export default defineConfig([
     files: ["**/*.test.js", "**/*.spec.js"],
     plugins: { vitest },
     languageOptions: {
-      globals: globals.vitest,
+      globals: {
+        ...globals.vitest,
+        ...globals.node,
+      },
     },
     rules: {
       ...vitest.configs.recommended.rules,
