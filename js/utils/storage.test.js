@@ -5,12 +5,7 @@ const userKey = "user";
 
 describe("getUsername", () => {
   beforeEach(() => {
-    const storage = {};
-
-    global.localStorage = {
-      setItem: (key, value) => (storage[key] = value),
-      getItem: (key) => storage[key],
-    };
+    localStorage.clear();
   });
 
   test("returns the name from the user object in storage", () => {
