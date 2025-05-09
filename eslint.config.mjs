@@ -14,7 +14,7 @@ export default defineConfig([
   },
 
   {
-    files: ["tailwind.config.js", "eslint.config.js"],
+    files: ["tailwind.config.js", "eslint.config.js", "playwright.config.js"],
     languageOptions: {
       globals: globals.node,
     },
