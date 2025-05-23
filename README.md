@@ -43,6 +43,12 @@ To open the Playwright Test UI (useful for debugging):
 npx playwright test --ui
 ```
 
+To see e2e test report:
+
+```bash
+npx playwright show-report
+```
+
 ### Unit Tests (Vitest)
 
 Run the unit tests using:
